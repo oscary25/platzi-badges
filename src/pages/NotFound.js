@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 
-function NotFound() {
-  return <h1>404: Not Found</h1>;
-}
+// function NotFound() {
+//   return <h1>404: Not Found</h1>;
+// }
 
-export default NotFound;
+// export default NotFound;

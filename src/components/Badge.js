@@ -1,15 +1,15 @@
-import React from 'react';
-
-import './styles/Badge.css';
-import confLogo from '../images/badge-header.svg';
+import React from "react";
+import confLogo from "../images/badge-header.svg";
+import "./styles/Badge.css";
 
 class Badge extends React.Component {
   render() {
     return (
-      <div className="Badge">
-        <div className="Badge__header">
-          <img src={confLogo} alt="Logo de la conferencia" />
+      <div>
+        <div>
+          <img src={confLogo} alt="Logo" />
         </div>
+<<<<<<< HEAD
 
         <div className="Badge__section-name">
           <img
@@ -28,6 +28,22 @@ class Badge extends React.Component {
         </div>
 
         <div className="Badge__footer">#platziconf</div>
+=======
+        <div>
+          <div>
+            <img src="" alt="avatar" />
+            <h1>
+              {" "}
+              Oscary <br /> Garcia{" "}
+            </h1>
+          </div>
+          <div>
+            <p>Frontedn Develop</p>
+            <p>@oscarygarcias.</p>
+          </div>
+          <div>#platziconf</div>
+        </div>
+>>>>>>> fe29a24... ultimo
       </div>
     );
   }

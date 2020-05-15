@@ -5,11 +5,14 @@
   "scripts": {
     "start": "npm-run-all -p client server",
     "client": "react-scripts start",
-    "server": "json-server --port 3001 --watch server/db.json",
+    "server": "json-server --port 3001 --watch server/db.json  --static ./dist",
     "seed": "node server/seed.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-badge": "webpack-dev-server --config ./webpack.dev.config.js",
+    "build-badgedll": "webpack-dev-server --config ./webpack.dll.config.js --mode production",
+    "build-badgepro": "webpack-dev-server --config ./webpack.dev.config.js --mode production"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
@@ -19,9 +22,26 @@
     "react-scripts": "^3.4.1"
   },
   "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-react": "7.9.4",
+    "babel-loader": "8.1.0",
+    "css-loader": "3.5.3",
     "faker": "^4.1.0",
+    "file-loader": "6.0.0",
+    "html-webpack-plugin": "4.3.0",
     "json-server": "^0.16.1",
-    "npm-run-all": "^4.1.5"
+    "mini-css-extract-plugin": "0.9.0",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "1.2.1",
+    "terser-webpack-plugin": "^3.0.1",
+    "url-loader": "4.1.0",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.11.0"
   },
   "eslintConfig": {
     "extends": "react-app"

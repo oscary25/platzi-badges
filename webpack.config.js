@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/[name].js",
+    filename: "js/[name].[hash].js",
     publicPath: "http://localhost:3001/",
     chunkFilename: "js/[id].[chunkhash].js",
   },
@@ -42,6 +42,8 @@ module.exports = {
           loader: "url-loader",
           options: {
             limit: 100,
+            name: "[hash].[ext]",
+            outputPath: "assets",
           },
         },
       },
@@ -49,8 +51,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "css/[id].css",
+      filename: "css/[name].[hash].css",
+      chunkFilename: "css/[id].[hash].css",
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
